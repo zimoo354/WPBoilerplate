@@ -6,7 +6,7 @@
     <script src="<?php res(); ?>/js/skrollr.min.js"></script>
 	<script src="<?php res(); ?>/js/mandrill.js"></script>
     <script src="<?php res(); ?>/js/swal.js"></script>
-    <script src="<?php res(); ?>/js/nicescroll.js"></script>
+    <script src="<?php res(); ?>/js/SmoothScroll.js"></script>
     <script src="<?php res(); ?>/script.js"></script>
 
 <!-- SCRIPT ZONE -->
