@@ -1,4 +1,4 @@
 $(document).ready(function(){
-	$('html').niceScroll();
 	$(document).foundation();
+	$('.menu-mobile-trigger').sidr();
 });
