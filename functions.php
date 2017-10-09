@@ -4,7 +4,7 @@ if (!is_admin()) :
 
 /* Style Zone */
 
-wp_enqueue_style('swiper',get_template_directory_uri() . "/style.css", array(), '', 'all');
+wp_enqueue_style('style',get_template_directory_uri() . "/style.css", array(), '', 'all');
 wp_enqueue_style('swiper',get_template_directory_uri() . "/css/swiper.min.css", array(), '', 'all');
 wp_enqueue_style('normalize',get_template_directory_uri() . "/css/normalize.css", array(), '', 'all');
 wp_enqueue_style('foundation',get_template_directory_uri() . "/css/foundation.min.css", array(), '', 'all');
