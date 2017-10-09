@@ -26,7 +26,7 @@
 				</ul>
 			</div>
             <div class="small-6 columns show-for-small-only">
-                <a href="#sidr" class="menu-mobile-trigger"><i class="fa fa-bars fa-inverse fa-2x float-right"></i></a>
+                <a href="#sidr" class="menu-mobile-trigger"><i class="fa fa-bars fa-2x float-right"></i></a>
             </div>
 		</div>
 	</header>
