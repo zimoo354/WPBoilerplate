@@ -16,18 +16,26 @@
 				<img src="<?php res() ?>/path/to/logo.png" alt="Logo">
 			</div>
 			<div class="hide-for-small-only medium-9 columns">
-				<ul class="menu float-right">
-				<?php
-				$menu = wp_get_nav_menu_items('main');
-				foreach ($menu as $e) :
-					?>
-					<li><a href="<?php echo $e->url ?>"><?php echo $e->title ?></a></li>
-				<?php endforeach ?>
+				<ul class="menu float-right dropdown" data-dropdown-menu>
+					<?php
+					$menu = buildTree(wp_get_nav_menu_items('main'));
+					foreach ($menu as $e) :
+						?>
+						<li><a href="<?php echo $e->url ?>" class="hvr-underline-from-center"><?php echo $e->title ?></a>
+							<?php if(!empty($e->wpse_children)): ?>
+								<ul class="menu vertical">
+									<?php foreach ( $e->wpse_children as $subitem ): ?>
+										<li><a href="<?php echo $subitem->url ?>"><?php echo $subitem->title ?></a></li>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif ?>
+						</li>
+					<?php endforeach ?>
 				</ul>
 			</div>
-            <div class="small-6 columns show-for-small-only">
-                <a href="#sidr" class="menu-mobile-trigger"><i class="fa fa-bars fa-2x float-right"></i></a>
-            </div>
+			<div class="small-6 columns show-for-small-only">
+				<a href="#sidr" class="menu-mobile-trigger"><i class="fa fa-bars fa-2x float-right"></i></a>
+			</div>
 		</div>
 	</header>
 

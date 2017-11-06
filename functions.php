@@ -45,3 +45,22 @@ function res() {
 function base_url() {
     bloginfo('url');
 }
+
+
+function buildTree( array $elements, $parentId = 0 )
+{
+	$branch = array();
+	foreach ( $elements as $element )
+	{
+		if ( $element->menu_item_parent == $parentId )
+		{
+			$children = buildTree( $elements, $element->ID );
+			if ( $children )
+				$element->wpse_children = $children;
+
+			$branch[$element->ID] = $element;
+			unset( $element );
+		}
+	}
+	return $branch;
+}
